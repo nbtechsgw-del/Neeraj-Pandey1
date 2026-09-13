@@ -1,0 +1,210 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>module5</title>
+    <style> .responsive {
+    max-width: 100%;
+    height: auto;
+}</style>
+</head>
+<body>
+    <img src="image.jpg" alt="Description">
+    <img src="profile.jpg">
+    <img src="photo.jpg" alt="Photo">
+<img src="logo.png" alt="Logo">
+<img src="icon.svg" alt="Icon">
+<img src="image.webp" alt="Image">
+<img src="image.jpg" alt="Example" class="responsive">
+
+
+<audio controls>
+
+    <source
+        src="song.mp3"
+        type="audio/mpeg"
+    >
+
+    Your browser does not support audio.
+
+</audio>
+
+<iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/VIDEO_ID"
+    title="YouTube video"
+    allowfullscreen>
+</iframe>
+
+<iframe
+    src="MAP_EMBED_URL"
+    width="600"
+    height="450"
+    style="border:0;"
+    allowfullscreen>
+</iframe>
+</body>
+</html> -->
+
+
+
+🖼 Module 5: Images and Media
+1. Inserting Images with <img>
+
+Basic syntax:
+
+<img src="image.jpg" alt="Description">
+
+The <img> element does not need a closing tag.
+
+Important Attributes
+src
+
+Specifies the image location.
+
+<img src="profile.jpg">
+alt
+
+Provides alternative text.
+
+<img src="profile.jpg" alt="Profile picture">
+
+It is important for:
+
+Accessibility
+Screen readers
+When an image fails to load
+Width and Height
+<img
+    src="image.jpg"
+    alt="Nature"
+    width="400"
+    height="300"
+>
+2. Image Formats
+Format	Best Use
+JPG/JPEG	Photographs
+PNG	Transparency and detailed graphics
+SVG	Logos and vector graphics
+WebP	Modern compressed images
+Example
+<img src="photo.jpg" alt="Photo">
+<img src="logo.png" alt="Logo">
+<img src="icon.svg" alt="Icon">
+<img src="image.webp" alt="Image">
+3. Responsive Images
+Using CSS
+<img src="image.jpg" alt="Example" class="responsive">
+.responsive {
+    max-width: 100%;
+    height: auto;
+}
+Using srcset
+
+Allows the browser to choose an appropriate image.
+
+<img
+    src="small.jpg"
+    srcset="
+        small.jpg 480w,
+        medium.jpg 800w,
+        large.jpg 1200w
+    "
+    alt="Responsive image"
+>
+Using <picture>
+
+Useful when you want different images for different screen sizes.
+
+<picture>
+
+    <source
+        media="(max-width: 600px)"
+        srcset="mobile.jpg"
+    >
+
+    <source
+        media="(max-width: 1000px)"
+        srcset="tablet.jpg"
+    >
+
+    <img src="desktop.jpg" alt="Responsive image">
+
+</picture>
+4. Embedding Video
+<video controls width="500">
+
+    <source
+        src="video.mp4"
+        type="video/mp4"
+    >
+
+    Your browser does not support video.
+
+</video>
+Common Attributes
+controls
+
+Shows play, pause, volume, etc.
+
+<video controls>
+autoplay
+
+Starts the video automatically.
+
+<video autoplay>
+loop
+
+Repeats the video.
+
+<video loop>
+
+A commonly used pattern is:
+
+<video autoplay muted loop>
+5. Embedding Audio
+<audio controls>
+
+    <source
+        src="song.mp3"
+        type="audio/mpeg"
+    >
+
+    Your browser does not support audio.
+
+</audio>
+
+Attributes:
+
+<audio controls autoplay loop>
+
+Common attributes:
+
+controls
+autoplay
+loop
+muted
+6. Embedding YouTube Videos
+
+YouTube videos are commonly embedded using <iframe>.
+
+<iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/VIDEO_ID"
+    title="YouTube video"
+    allowfullscreen>
+</iframe>
+7. Embedding Google Maps
+
+Maps can also be embedded using an <iframe>.
+
+<iframe
+    src="MAP_EMBED_URL"
+    width="600"
+    height="450"
+    style="border:0;"
+    allowfullscreen>
+</iframe>
