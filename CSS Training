@@ -1,0 +1,86 @@
+CSS Training 
+Module 1: Introduction to CSS
+•	What is CSS?
+•	Why use CSS?
+•	CSS vs HTML
+•	Types of CSS:
+o	Inline
+o	Internal
+o	External
+•	CSS Syntax and Selectors
+Module 2: CSS Selectors and Properties
+•	Basic selectors (element, class, ID)
+•	Grouping selectors
+•	Combinators (>, +, ~, space)
+•	Pseudo-classes (:hover, :nth-child, :first-child, etc.)
+•	Pseudo-elements (::before, ::after, etc.)
+•	Attribute selectors
+Module 3: Colors, Units, and Measurements
+•	Color formats: HEX, RGB, RGBA, HSL
+•	Length units: px, em, rem, %, vw, vh
+•	Borders, Margins, and Padding
+•	Box Model in detail
+Module 4: Typography in CSS
+•	Font families
+•	Font size, weight, style
+•	Text alignment, spacing, decoration
+•	Line height and letter spacing
+•	@font-face and Google Fonts
+Module 5: Backgrounds and Gradients
+•	Background color and images
+•	Background-repeat, position, and size
+•	Linear and radial gradients
+Module 6: CSS Layout Techniques
+•	Display: block, inline, inline-block, none
+•	Positioning: static, relative, absolute, fixed, sticky
+•	Float and Clear
+•	Overflow and Visibility
+•	Z-index
+Module 7: Flexbox
+•	Flex container and flex items
+•	Main axis vs cross axis
+•	Properties:
+o	display: flex
+o	justify-content
+o	align-items
+o	flex-direction, flex-wrap
+o	order, flex-grow, flex-shrink, flex-basis
+•	Building responsive layouts with Flexbox
+Module 8: CSS Grid
+•	Grid container and items
+•	Rows and columns
+•	Grid template areas
+•	Grid auto-flow
+•	Responsive layout using Grid
+Module 9: Responsive Design & Media Queries
+•	What is responsive design?
+•	Media query syntax and breakpoints
+•	Mobile-first vs desktop-first
+•	Viewport meta tag
+•	Responsive units (%, em, rem, vw, vh)
+Module 10: CSS Transitions and Animations
+•	Transitions: properties, duration, easing
+•	Keyframe animations
+•	Animation properties
+•	Chaining animations
+•	Transform: scale, rotate, translate
+Module 11: CSS Best Practices
+•	Writing clean and maintainable CSS
+•	Naming conventions (BEM, OOCSS, SMACSS)
+•	Avoiding specificity issues
+•	Using variables (CSS custom properties)
+•	Working with CSS Resets/Normalize
+Module 12: Advanced Topics (Optional)
+•	SCSS/SASS introduction
+•	CSS functions: calc(), clamp(), var()
+•	CSS Layers and Cascade
+•	Modern CSS features (subgrid, container queries)
+•	Theming with CSS variables
+Module 13: Projects & Practice
+•	Mini Projects:
+o	Responsive navbar
+o	Card layouts
+o	Flexbox grid
+o	Image gallery
+•	Final Project: Fully responsive webpage or landing page
+
