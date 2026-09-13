@@ -1,0 +1,296 @@
+/* Module 2: CSS Selectors and Properties — Short Notes
+1. Basic Selectors
+Element Selector
+
+Selects HTML elements by tag name.
+
+p {
+  color: blue;
+}
+Class Selector
+
+Uses . and selects elements with a specific class.
+
+.box {
+  background: yellow;
+}
+ID Selector
+
+Uses # and selects an element with a specific ID.
+
+#title {
+  color: red;
+}
+2. Grouping Selectors
+
+Used to apply the same style to multiple selectors.
+
+h1, h2, p {
+  color: green;
+}
+
+This applies green color to h1, h2, and p.
+
+3. Combinators
+
+Combinators define the relationship between HTML elements.
+
+> Child
+
+Selects a direct child.
+
+div > p {
+  color: red;
+}
++ Adjacent Sibling
+
+Selects the element immediately after another element.
+
+h1 + p {
+  color: blue;
+}
+~ General Sibling
+
+Selects all matching siblings after an element.
+
+h1 ~ p {
+  color: green;
+}
+Space Descendant
+
+Selects elements inside another element.
+
+div p {
+  color: purple;
+}
+4. Pseudo-classes
+
+Pseudo-classes select an element based on its state or position.
+
+:hover
+
+Applies style when the mouse is over an element.
+
+button:hover {
+  background: black;
+  color: white;
+}
+:first-child
+
+Selects the first child.
+
+p:first-child {
+  color: red;
+}
+:nth-child()
+
+Selects a child based on its position.
+
+li:nth-child(2) {
+  color: blue;
+}
+
+This selects the second <li>.
+
+5. Pseudo-elements
+
+Pseudo-elements style a specific part of an element.
+
+::before
+p::before {
+  content: "👉 ";
+}
+
+Adds content before the paragraph.
+
+::after
+p::after {
+  content: " ✔";
+}
+
+Adds content after the paragraph.
+
+Other examples:
+p::first-letter {
+  font-size: 30px;
+}
+
+p::first-line {
+  font-weight: bold;
+}
+6. Attribute Selectors
+
+Attribute selectors select elements based on their HTML attributes.
+
+[type]
+input[type] {
+  border: 1px solid black;
+}
+
+Selects inputs having a type attribute.
+
+[type="text"]
+input[type="text"] {
+  background: lightgray;
+}
+
+Selects only text inputs.
+
+[target="_blank"]
+a[target="_blank"] {
+  color: red;
+}
+
+Selects links whose target is _blank. */
+
+/* Class Selector */
+
+/* .box {
+    background: yellow;
+}
+
+/* 
+ID Selector */
+/* 
+#title {
+  color: red;
+}
+
+/* Grouping Selectors */
+/* 
+h1, h2, p {
+  color: green;
+} */ 
+
+
+
+/* 1. Descendant Combinator (space) */
+.container p {
+  color: blue;
+}
+
+
+/* 2. Child Combinator (>) */
+.container > p {
+  background-color: yellow;
+}
+
+
+/* 3. Adjacent Sibling Combinator (+) */
+h2 + p {
+  font-size: 25px;
+  color: red;
+}
+
+
+/* 4. General Sibling Combinator (~) */
+h2 ~ p {
+  text-decoration: underline;
+}
+
+
+
+/* 1. :hover */
+button:hover {
+  background-color: black;
+  color: white;
+}
+
+
+/* 2. :first-child */
+li:first-child {
+  color: red;
+}
+
+
+/* 3. :last-child */
+li:last-child {
+  color: blue;
+}
+
+
+/* 4. :nth-child() */
+li:nth-child(3) {
+  color: green;
+  font-weight: bold;
+}
+
+
+/* 5. :focus */
+input:focus {
+  border: 3px solid orange;
+  outline: none;
+}
+
+
+/* 6. :active */
+a:active {
+  color: red;
+}
+
+
+/* 1. ::before */
+h1::before {
+  content: "★ ";
+  color: orange;
+}
+
+
+/* 2. ::after */
+h1::after {
+  content: " ✓";
+  color: green;
+}
+
+
+/* 3. ::first-letter */
+p::first-letter {
+  font-size: 40px;
+  color: red;
+  font-weight: bold;
+}
+
+
+/* 4. ::first-line */
+p::first-line {
+  color: blue;
+}
+
+
+/* 5. ::before and ::after with a box */
+.box::before {
+  content: "Start: ";
+  color: red;
+  font-weight: bold;
+}
+
+.box::after {
+  content: " :End";
+  color: green;
+  font-weight: bold;
+}
+
+
+
+/* Attribute exists */
+input[type] {
+  border: 2px solid blue;
+}
+
+
+/* Exact value */
+input[type="text"] {
+  background-color: yellow;
+}
+
+
+/* Starts with */
+a[href^="https"] {
+  color: green;
+}
+
+
+/* Ends with */
+a[href$=".pdf"] {
+  color: red;
+}
