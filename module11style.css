@@ -1,0 +1,235 @@
+/* =========================================
+   1. CSS RESET
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   2. CSS VARIABLES
+   ========================================= */
+
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #16a34a;
+    --dark-color: #1e293b;
+    --light-color: #f8fafc;
+    --text-color: #334155;
+    --white-color: #ffffff;
+
+    --small-space: 10px;
+    --medium-space: 20px;
+    --large-space: 40px;
+
+    --border-radius: 8px;
+}
+
+
+/* =========================================
+   3. BASE / ELEMENT STYLES
+   ========================================= */
+
+body {
+    background-color: var(--light-color);
+    color: var(--text-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+
+/* =========================================
+   4. LAYOUT - SMACSS
+   ========================================= */
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   5. HEADER
+   ========================================= */
+
+.site-header {
+    background-color: var(--dark-color);
+    padding: var(--medium-space) 0;
+}
+
+.site-header__title {
+    color: var(--white-color);
+    margin-bottom: var(--small-space);
+}
+
+.site-header__nav {
+    display: flex;
+    gap: var(--medium-space);
+}
+
+.site-header__link {
+    color: var(--white-color);
+}
+
+.site-header__link:hover {
+    color: #93c5fd;
+}
+
+
+/* =========================================
+   6. HERO
+   ========================================= */
+
+.hero {
+    text-align: center;
+    padding: 60px 0;
+}
+
+.hero__title {
+    font-size: 40px;
+    color: var(--dark-color);
+    margin-bottom: var(--small-space);
+}
+
+.hero__text {
+    margin-bottom: var(--medium-space);
+}
+
+
+/* =========================================
+   7. BUTTON - OOCSS
+   ========================================= */
+
+/*
+   .button = reusable structure
+
+   .button--primary = visual variation
+   .button--secondary = visual variation
+*/
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    margin: 5px;
+    font-size: 16px;
+}
+
+.button--primary {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.button--secondary {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+}
+
+.button:hover {
+    opacity: 0.85;
+}
+
+
+/* =========================================
+   8. PROJECT SECTION
+   ========================================= */
+
+.projects {
+    padding: 40px 0;
+}
+
+.projects__title {
+    text-align: center;
+    margin-bottom: var(--large-space);
+    color: var(--dark-color);
+}
+
+.card-container {
+    display: flex;
+    gap: var(--medium-space);
+    flex-wrap: wrap;
+}
+
+
+/* =========================================
+   9. CARD - BEM
+   ========================================= */
+
+.card {
+    flex: 1;
+    min-width: 250px;
+
+    background-color: var(--white-color);
+
+    padding: var(--medium-space);
+
+    border-radius: var(--border-radius);
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card__title {
+    color: var(--dark-color);
+    margin-bottom: var(--small-space);
+}
+
+.card__text {
+    margin-bottom: var(--medium-space);
+}
+
+
+/* =========================================
+   10. FOOTER
+   ========================================= */
+
+.site-footer {
+    background-color: var(--dark-color);
+    padding: var(--medium-space) 0;
+    text-align: center;
+}
+
+.site-footer__text {
+    color: var(--white-color);
+}
+
+
+/* =========================================
+   11. RESPONSIVE DESIGN
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .site-header__nav {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .hero__title {
+        font-size: 30px;
+    }
+
+    .card-container {
+        flex-direction: column;
+    }
+
+}

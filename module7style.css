@@ -1,0 +1,354 @@
+/* Module 7: CSS Flexbox
+
+Flexbox is a CSS layout system used to arrange elements in a row or column and make layouts responsive.
+
+1. Flex Container and Flex Items
+
+When we write:
+
+.container {
+  display: flex;
+}
+
+.container becomes the Flex Container.
+
+Its direct children become Flex Items.
+
+Example
+
+HTML
+
+<div class="container">
+  <div class="item">Box 1</div>
+  <div class="item">Box 2</div>
+  <div class="item">Box 3</div>
+</div>
+
+CSS
+
+.container {
+  display: flex;
+}
+
+.item {
+  width: 100px;
+  height: 100px;
+  background: lightblue;
+  margin: 10px;
+}
+
+Here:
+
+.container → Flex Container
+.item → Flex Items
+2. Main Axis vs Cross Axis
+
+Flexbox has two important axes.
+
+Default direction: Row
+Main Axis →
+┌──────┐ ┌──────┐ ┌──────┐
+│ Box 1│ │ Box 2│ │ Box 3│
+└──────┘ └──────┘ └──────┘
+          ↓
+       Cross Axis
+Main Axis
+
+The main axis is the direction in which flex items are arranged.
+
+For:
+
+flex-direction: row;
+
+Main axis = horizontal
+
+For:
+
+flex-direction: column;
+
+Main axis = vertical
+
+Cross Axis
+
+The cross axis is perpendicular to the main axis.
+
+Remember:
+
+justify-content → Main Axis
+align-items → Cross Axis
+
+3. display: flex
+
+This activates Flexbox.
+
+.container {
+  display: flex;
+}
+
+By default, items are placed in a row.
+
+Box 1   Box 2   Box 3
+4. justify-content
+
+Controls the position of items on the main axis.
+
+Common values
+justify-content: flex-start;
+[1][2][3]----------------
+center
+justify-content: center;
+--------[1][2][3]--------
+flex-end
+justify-content: flex-end;
+----------------[1][2][3]
+space-between
+justify-content: space-between;
+[1]--------- [2] ---------[3]
+space-around
+justify-content: space-around;
+space-evenly
+justify-content: space-evenly;
+5. align-items
+
+Controls items on the cross axis.
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+Common values:
+
+align-items: flex-start;
+align-items: center;
+align-items: flex-end;
+align-items: stretch;
+Example: Center a box
+.container {
+  display: flex;
+  height: 300px;
+
+  justify-content: center;
+  align-items: center;
+}
+
+This places the box in the center horizontally and vertically.
+
+6. flex-direction
+
+Controls the direction of flex items.
+
+Row
+flex-direction: row;
+1  2  3
+Row Reverse
+flex-direction: row-reverse;
+3  2  1
+Column
+flex-direction: column;
+1
+2
+3
+Column Reverse
+flex-direction: column-reverse;
+3
+2
+1
+7. flex-wrap
+
+Controls whether items should move to a new line when there isn't enough space.
+
+No wrapping
+flex-wrap: nowrap;
+
+Default behavior.
+
+Wrapping
+flex-wrap: wrap;
+
+Example:
+
+[1] [2] [3] [4]
+[5] [6] [7] [8]
+
+Very useful for responsive cards.
+
+8. order
+
+Changes the order of individual flex items.
+
+HTML:
+
+<div class="container">
+  <div class="box one">1</div>
+  <div class="box two">2</div>
+  <div class="box three">3</div>
+</div>
+
+CSS:
+
+.one {
+  order: 3;
+}
+
+.two {
+  order: 1;
+}
+
+.three {
+  order: 2;
+}
+
+Output:
+
+2  3  1
+
+Default order is 0.
+
+9. flex-grow
+
+Controls how much an item can grow when extra space is available.
+
+.one {
+  flex-grow: 1;
+}
+
+.two {
+  flex-grow: 2;
+}
+
+The second item gets approximately twice as much extra space as the first.
+
+10. flex-shrink
+
+Controls how much an item shrinks when there isn't enough space.
+
+.box {
+  flex-shrink: 1;
+}
+
+Default:
+
+flex-shrink: 1;
+
+To prevent shrinking:
+
+.box {
+  flex-shrink: 0;
+}
+11. flex-basis
+
+Sets the initial size of a flex item before extra space is distributed.
+
+.box {
+  flex-basis: 200px;
+}
+
+Think:
+
+flex-basis = starting size of the item.
+
+12. Complete Flexbox Program
+
+This program demonstrates responsive cards.
+
+HTML
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Flexbox Example</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>My Courses</h1>
+
+  <div class="container">
+
+    <div class="card">
+      <h2>HTML</h2>
+      <p>Learn HTML basics.</p>
+      <button>Learn More</button>
+    </div>
+
+    <div class="card">
+      <h2>CSS</h2>
+      <p>Learn CSS and Flexbox.</p>
+      <button>Learn More</button>
+    </div>
+
+    <div class="card">
+      <h2>JavaScript</h2>
+      <p>Learn JavaScript basics.</p>
+      <button>Learn More</button>
+    </div>
+
+  </div>
+
+</body>
+</html>
+CSS
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+h1 {
+  text-align: center;
+}
+
+/* Flex Container */
+/* .container {
+  display: flex;
+
+  justify-content: center;
+  align-items: stretch;
+
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  gap: 20px;
+} */
+
+/* Flex Items */
+/* .card {
+  flex-basis: 250px;
+  flex-grow: 1;
+
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+button {
+  padding: 10px 20px;
+}
+How this becomes responsive
+
+Suppose the screen is wide: */
+/* 
+┌────────┐  ┌────────┐  ┌────────┐
+│  HTML  │  │  CSS   │  │   JS   │
+└────────┘  └────────┘  └────────┘
+
+On a smaller screen, because of:
+
+flex-wrap: wrap;
+
+the cards can move to another line: */
+
+/* ┌────────┐  ┌────────┐
+│  HTML  │  │  CSS   │
+└────────┘  └────────┘
+
+┌────────┐
+│   JS   │
+└────────┘ */ 
+
+
