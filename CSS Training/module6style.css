@@ -1,0 +1,96 @@
+/* <!-- Module 5: Linear and Radial Gradients
+1. Linear Gradient
+
+A linear gradient changes colors in a direction: left → right, top → bottom, etc.
+
+.box {
+  width: 400px;
+  height: 150px;
+  background: linear-gradient(to right, blue, purple);
+}
+
+Other directions:
+
+background: linear-gradient(to bottom, red, yellow);
+background: linear-gradient(45deg, red, blue);
+2. Radial Gradient
+
+A radial gradient spreads colors from the center outward in a circular/elliptical way.
+
+.box {
+  width: 400px;
+  height: 150px;
+  background: radial-gradient(circle, yellow, orange, red);
+}
+Quick Difference
+Linear	Radial
+Direction-based	Center-based
+linear-gradient()	radial-gradient()
+Left/right/top/bottom	Circular/center effect
+Module 6: CSS Layout Techniques
+1. Display
+
+The display property controls how an element appears in the layout.
+
+display: block
+
+Takes the full available width and starts on a new line.
+
+div {
+  display: block;
+}
+
+Examples: div, p, h1
+
+display: inline
+
+Stays on the same line.
+
+span {
+  display: inline;
+}
+
+Examples: span, a
+
+display: inline-block
+
+Stays on the same line but allows width and height.
+
+.box {
+  display: inline-block;
+  width: 150px;
+  height: 100px;
+}
+display: none
+
+Completely hides the element.
+
+.box {
+  display: none;
+}
+
+The element also takes no space. --> */
+
+
+.block {
+  display: block;
+  background: lightblue;
+  padding: 20px;
+}
+
+.inline {
+  display: inline;
+  background: yellow;
+}
+
+.box {
+  display: inline-block;
+  width: 150px;
+  height: 80px;
+  background: lightgreen;
+  margin: 10px;
+}
+
+.hide {
+  display: none;
+}
