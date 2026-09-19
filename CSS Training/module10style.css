@@ -1,0 +1,126 @@
+/* Module 10: CSS Transitions and Animations
+1. CSS Transitions
+
+A transition makes a CSS property change smoothly from one value to another.
+
+Important Transition Properties
+transition-property → Specifies which property will change.
+transition-duration → Specifies how long the change takes.
+transition-timing-function → Controls the speed of the transition.
+transition-delay → Specifies when the transition starts.
+Example */
+
+/* 
+
+.box {
+    width: 150px;
+    height: 150px;
+    background-color: blue;
+
+    transition-property: background-color;
+    transition-duration: 2s;
+    transition-timing-function: ease;
+}
+
+.box:hover {
+    background-color: red;
+} */
+
+
+/* 
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+
+    animation: moveBox 3s;
+}
+
+@keyframes moveBox {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(200px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+} */
+
+
+
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+
+    animation-name: move;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-delay: 1s;
+    animation-iteration-count: 3;
+    animation-direction: alternate;
+}
+
+@keyframes move {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(300px);
+    }
+}
+
+
+
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: purple;
+
+    animation:
+        move 2s,
+        rotateBox 2s 2s,
+        scaleBox 2s 4s;
+}
+
+@keyframes move {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(200px);
+    }
+}
+
+@keyframes rotateBox {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes scaleBox {
+
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.5);
+    }
+}

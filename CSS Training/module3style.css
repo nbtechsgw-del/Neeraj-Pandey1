@@ -1,0 +1,497 @@
+/* Module 3: Colors, Units, and Measurements in CSS
+
+This module covers colors, CSS units, borders, margins, padding, and the Box Model.
+
+1. Color Formats
+
+CSS provides different ways to define colors.
+
+A. HEX
+
+HEX uses a # followed by 6 characters.
+
+h1 {
+  color: #ff0000;
+}
+
+#ff0000 = Red.
+
+Examples:
+
+color: #000000;  /* Black */
+/* color: #ffffff;  /* White */
+/* color: #ff0000;  /* Red */
+/* color: #00ff00;  /* Green */
+/* color: #0000ff;  
+B. RGB
+
+RGB means:
+
+R = Red
+G = Green
+B = Blue
+
+Values range from 0 to 255.
+
+h1 {
+  color: rgb(255, 0, 0);
+}
+
+This is red.
+
+Examples: */
+/* 
+color: rgb(0, 0, 0);       
+color: rgb(255, 255, 255); 
+color: rgb(255, 0, 0);     
+color: rgb(0, 0, 255);     
+C. RGBA */ 
+
+/* RGBA is RGB + Alpha.
+
+Alpha controls transparency.
+
+The alpha value is between 0 and 1.
+
+background-color: rgba(255, 0, 0, 0.5);
+
+Here:
+
+255, 0, 0 = red
+0.5 = 50% transparency
+
+Examples:
+
+rgba(255, 0, 0, 1);    /* No transparency */
+/* rgba(255, 0, 0, 0.5);  /* 50% transparent */
+/* rgba(255, 0, 0, 0);    Completely transparent */ 
+/* D. HSL */
+
+/* HSL means:
+
+H = Hue
+S = Saturation
+L = Lightness
+
+Example:
+
+h1 {
+  color: hsl(0, 100%, 50%); */
+
+/* This represents red.
+
+Example:
+
+color: hsl(120, 100%, 50%); /* Green */
+/* color: hsl(240, 100%, 50%); */
+
+/* Blue */
+/* 2. Length Units
+
+CSS units define size, width, height, spacing, etc.
+
+A. px
+
+px means pixels.
+
+.box {
+  width: 200px;
+  height: 100px;
+} */
+/* 
+Good when you want a fixed size.
+
+B. %
+
+Percentage is relative to the parent/container.
+
+.box {
+  width: 50%;
+}
+
+If the parent is 1000px wide, the box will be approximately 500px wide.
+
+C. em
+
+em is relative to the font size of the element/its relevant parent context.
+
+.box {
+  font-size: 20px;
+  padding: 2em;
+}
+
+Here 2em corresponds to 40px when the relevant font size is 20px.
+
+D. rem
+
+rem is relative to the root (html) font size.
+
+html {
+  font-size: 16px;
+}
+
+.box {
+  font-size: 2rem;
+} */
+/* 
+2rem = 32px.
+
+rem is commonly preferred for scalable typography and spacing.
+
+E. vw
+
+vw = viewport width.
+
+.box {
+  width: 50vw;
+}
+
+50vw means 50% of the browser window's width.
+
+F. vh
+
+vh = viewport height.
+
+.box {
+  height: 50vh;
+}
+
+50vh means 50% of the browser window's height.
+
+3. Borders
+
+A border goes around an element.
+
+Basic syntax:
+
+.box {
+  border: 2px solid black;
+} */
+/* 
+It contains:
+
+2px    → thickness
+solid  → style
+black  → color
+Different border styles
+border: 2px solid black;
+border: 2px dashed red;
+border: 2px dotted blue;
+
+You can also make rounded corners:
+
+.box {
+  border: 2px solid black;
+  border-radius: 10px;
+}
+4. Padding
+
+Padding is the space between the content and the border.
+
+.box {
+  padding: 20px;
+}
+
+Think:
+
+┌─────────────────────┐
+│      Padding         │
+│   ┌─────────────┐   │
+│   │   Content   │   │
+│   └─────────────┘   │
+└─────────────────────┘
+
+You can set each side separately:
+
+.box {
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+}
+
+Or shorthand:
+
+padding: 10px 20px;
+
+Means:
+
+Top/Bottom = 10px
+Left/Right = 20px
+5. Margin
+
+Margin is the space outside the border.
+
+.box {
+  margin: 20px;
+}
+
+Think:
+
+       Margin
+    ↓         ↓
+   ┌─────────────┐
+   │   Border    │
+   │  ┌───────┐  │
+   │  │Content│  │
+   │  └───────┘  │
+   └─────────────┘
+
+Individual sides:
+
+margin-top: 20px;
+margin-right: 10px;
+margin-bottom: 20px;
+margin-left: 10px;
+
+Center a fixed-width block:
+
+.box {
+  width: 300px;
+  margin: 0 auto;
+}
+6. Box Model in Detail
+
+The CSS Box Model is one of the most important CSS concepts.
+
+Every HTML element is treated like a box.
+
+The Box Model has 4 parts:
+
+┌───────────────────────────────┐
+│             Margin            │
+│   ┌───────────────────────┐   │
+│   │         Border        │   │
+│   │   ┌───────────────┐   │   │
+│   │   │    Padding    │   │   │
+│   │   │   ┌────────┐  │   │   │
+│   │   │   │Content │  │   │   │
+│   │   │   └────────┘  │   │   │
+│   │   └───────────────┘   │   │
+│   └───────────────────────┘   │
+└───────────────────────────────┘
+1. Content
+
+The actual text, image, or other content.
+
+.box {
+  width: 200px;
+  height: 100px;
+}
+2. Padding
+
+Space inside the border around the content.
+
+padding: 20px;
+3. Border
+
+The line surrounding padding/content.
+
+border: 2px solid black;
+4. Margin
+
+Space outside the border.
+
+margin: 20px;
+7. Complete Box Model Example
+HTML
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS Box Model</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="box">
+    Hello CSS Box Model
+  </div>
+
+</body>
+</html>
+CSS
+.box {
+  width: 200px;
+  height: 100px;
+
+  padding: 20px;
+
+  border: 5px solid black;
+
+  margin: 30px;
+
+  background-color: lightblue;
+}
+What happens?
+
+The element has:
+
+Content  = 200px × 100px
+Padding  = 20px
+Border   = 5px
+Margin   = 30px */
+/* 
+
+By default, CSS uses:
+
+box-sizing: content-box;
+
+So the declared width: 200px applies to the content area, not the entire visible box.
+
+8. box-sizing: border-box
+
+This is very useful in real projects.
+
+* {
+  box-sizing: border-box;
+} */
+/* 
+Now:
+
+.box {
+  width: 200px;
+  padding: 20px;
+  border: 5px solid black;
+}
+
+The total width remains 200px, including padding and border.
+
+So a common practice is:
+
+* {
+  box-sizing: border-box;
+}   */
+
+
+
+
+
+
+/* HEX */
+.hex {
+  background-color: #ff0000;
+  color: white;
+  padding: 20px;
+  margin: 10px;
+}
+
+
+/* RGB */
+.rgb {
+  background-color: rgb(0, 128, 0);
+  color: white;
+  padding: 20px;
+  margin: 10px;
+}
+
+
+/* RGBA */
+.rgba {
+  background-color: rgba(0, 0, 255, 0.5);
+  color: black;
+  padding: 20px;
+  margin: 10px;
+}
+
+
+/* HSL */
+.hsl {
+  background-color: hsl(60, 100%, 50%);
+  color: black;
+  padding: 20px;
+  margin: 10px;
+}
+
+
+
+/* Root font size */
+html {
+  font-size: 16px;
+}
+
+
+/* 1. PX */
+.px {
+  width: 200px;
+  height: 100px;
+  background-color: lightblue;
+  margin: 10px;
+}
+
+
+/* 2. EM */
+.em {
+  font-size: 10px;
+  width: 10em;
+  height: 5em;
+  background-color: lightgreen;
+  margin: 10px;
+}
+
+
+/* 3. REM */
+.rem {
+  width: 10rem;
+  height: 5rem;
+  background-color: lightpink;
+  margin: 10px;
+}
+
+
+/* 4. % */
+.percent {
+  width: 50%;
+  height: 50px;
+  background-color: orange;
+  margin: 10px;
+}
+
+
+/* 5. VW */
+.vw {
+  width: 50vw;
+  height: 50px;
+  background-color: lightgray;
+  margin: 10px;
+}
+
+
+/* 6. VH */
+.vh {
+  width: 200px;
+  height: 20vh;
+  background-color: yellow;
+  margin: 10px;
+}
+
+
+
+body {
+  background-color: lightgray;
+}
+
+/* Border, Padding and Margin */
+.box {
+  width: 250px;
+  height: 100px;
+
+  /* Padding = space inside */
+  padding: 20px;
+
+  /* Border = line around the box */
+  border: 5px solid blue;
+
+  /* Margin = space outside */
+  margin: 30px;
+
+  background-color: white;
+}
+
+/* Different border */
+.second {
+  border: 5px dashed red;
+
+  padding: 10px;
+
+  margin: 50px;
+}

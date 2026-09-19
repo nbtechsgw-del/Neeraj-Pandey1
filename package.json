@@ -1,6 +1,26 @@
 {
+<<<<<<< HEAD
   "name": "javascript-training-modules-1-to-13",
   "version": "1.0.0",
   "description": "Detailed JavaScript training practice modules 1 to 13",
   "private": true
+=======
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.12.0",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "react-redux": "^9.3.0"
+  },
+  "name": "reactjsneeraj",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+>>>>>>> 99dce4b2e9f71b77e397d89d17beed63d1a071c6
 }
